@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "closest-fibonacci"
   gem.homepage = "http://github.com/geekier/closest-fibonacci"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{return closest integer in Fibonacci sequence less than or equal to input}
+  gem.description = %Q{return closest integer in Fibonacci sequence less than or equal to input integer as ceiling}
   gem.email = "grant@2cpro.com"
   gem.authors = ["Grant Rauscher"]
   # dependencies defined in Gemfile
@@ -42,8 +42,8 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
